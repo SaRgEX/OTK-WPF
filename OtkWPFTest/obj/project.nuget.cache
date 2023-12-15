@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "LsNtsSmRcL0gbg8gfBDwvCIQCerZ4CdPFc09N1c+ny6U16fAPTVbvIpbJT4T9VrUPYVX8+iydxoLZYa4UjXujg==",
+  "success": true,
+  "projectFilePath": "E:\\Dimlom\\Diplom\\C# WPF\\OtkWPFTest\\OTKApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\maze_\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

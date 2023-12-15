@@ -1,0 +1,12 @@
+E:\Dimlom\Diplom\C# WPF\OTKTestHTTP\bin\Debug\net7.0\OTKLib.deps.json
+E:\Dimlom\Diplom\C# WPF\OTKTestHTTP\bin\Debug\net7.0\OTKLib.dll
+E:\Dimlom\Diplom\C# WPF\OTKTestHTTP\bin\Debug\net7.0\OTKLib.pdb
+E:\Dimlom\Diplom\C# WPF\OTKTestHTTP\obj\Debug\net7.0\OTKLib.csproj.AssemblyReference.cache
+E:\Dimlom\Diplom\C# WPF\OTKTestHTTP\obj\Debug\net7.0\OTKLib.GeneratedMSBuildEditorConfig.editorconfig
+E:\Dimlom\Diplom\C# WPF\OTKTestHTTP\obj\Debug\net7.0\OTKLib.AssemblyInfoInputs.cache
+E:\Dimlom\Diplom\C# WPF\OTKTestHTTP\obj\Debug\net7.0\OTKLib.AssemblyInfo.cs
+E:\Dimlom\Diplom\C# WPF\OTKTestHTTP\obj\Debug\net7.0\OTKLib.csproj.CoreCompileInputs.cache
+E:\Dimlom\Diplom\C# WPF\OTKTestHTTP\obj\Debug\net7.0\OTKLib.dll
+E:\Dimlom\Diplom\C# WPF\OTKTestHTTP\obj\Debug\net7.0\refint\OTKLib.dll
+E:\Dimlom\Diplom\C# WPF\OTKTestHTTP\obj\Debug\net7.0\OTKLib.pdb
+E:\Dimlom\Diplom\C# WPF\OTKTestHTTP\obj\Debug\net7.0\ref\OTKLib.dll
