@@ -37,6 +37,8 @@ namespace OTKApp
         private async Task GetResponse()
         {
             dynamic result = await Request.GetJsonArrayFromHttpServer(Server.ProductURL);
+            if (result.data == null)
+                return;
             foreach (var item in result.data)
             {
                 products.Add(new Product(
@@ -45,8 +47,9 @@ namespace OTKApp
                     item.category.ToString(),
                     item.manufacturer.ToString(),
                     Convert.ToInt32(item.price) / 100,
-                    item.image.ToString(),
-                    item.description.ToString()));
+                    "http://localhost/" + item.image.ToString(),
+                    item.description.ToString(),
+                    item.amount.ToString()));
             }
         }
 
@@ -66,7 +69,7 @@ namespace OTKApp
             productWindow.tbArticle.Text = (lvProducts.SelectedItem as Product).Article.ToString();
             productWindow.tbName.Text = (lvProducts.SelectedItem as Product).Name;
             productWindow.tbDescription.Text = (lvProducts.SelectedItem as Product).Description;
-            productWindow.tbImage.Text = (lvProducts.SelectedItem as Product).Price.ToString();
+            productWindow.tbPrice.Text = (lvProducts.SelectedItem as Product).Price.ToString();
             productWindow.tbImage.Text = (lvProducts.SelectedItem as Product).Image;
             productWindow.Show();
             productWindow.Closed += ProductWindow_Closed;
@@ -82,6 +85,11 @@ namespace OTKApp
         {
             products.Clear();
             _ = GetResponse();
+        }
+
+        private void Image_ImageFailed(object sender, ExceptionRoutedEventArgs e)
+        {
+            (sender as Image).Source = new BitmapImage(new Uri("http://localhost/images/empty.png", UriKind.Absolute));
         }
     }
 }

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:OTKApp"
         mc:Ignorable="d"
         Title="MainWindow" MinHeight="300" MinWidth="500" Height="450" Width="800">
-    <Grid Background="#99CFCFCC">
+    <Grid Name="gMain" Background="#99CFCFCC">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="10*"/>

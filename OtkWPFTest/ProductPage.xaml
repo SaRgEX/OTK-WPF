@@ -14,23 +14,35 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <StackPanel>
-            <ListView Style="{DynamicResource ListViewProduct}" SelectionChanged="lvProducts_SelectionChanged" Grid.Row="0" Name="lvProducts" HorizontalContentAlignment="Stretch">
+            <ListView Style="{DynamicResource ListViewProduct}"
+                      SelectionChanged="lvProducts_SelectionChanged"
+                      Grid.Row="0"
+                      Name="lvProducts"
+                      HorizontalContentAlignment="Stretch">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>
-                            <Image></Image>
                             <Border Margin="0 5" CornerRadius="4" BorderThickness="1" BorderBrush="Black" Padding="5">
-                                <TextBlock FontFamily="JetBrains mono" FontSize="14">
-                                <Run Text="{Binding Name}"/>
-                                <LineBreak/>
-                                <Run Text="{Binding Category}"/>
-                                <Run Text="{Binding Manufacturer}"/>
-                                <LineBreak/>
-                                <Run Text="{Binding Price}"/>
-                                <Run Text="руб."/>
-                                <LineBreak/>
-                                <Run Text="{Binding Description}"/>
-                                </TextBlock>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="{Binding Image}"
+                                           Height="80"
+                                           Width="80"
+                                           ImageFailed="Image_ImageFailed">
+                                    </Image>
+                                    <TextBlock FontFamily="JetBrains mono" FontSize="14" Margin="10 0 0 0">
+                                        <Run Text="{Binding Name}"/>
+                                        <LineBreak/>
+                                        <Run Text="{Binding Category}"/>
+                                        <Run Text="{Binding Manufacturer}"/>
+                                        <LineBreak/>
+                                        <Run Text="{Binding Price}"/>
+                                        <Run Text="руб."/>
+                                        <LineBreak/>
+                                        <Run Text="{Binding Description}"/>
+                                        <LineBreak/>
+                                        <Run Text="{Binding Amount}"/>
+                                    </TextBlock>
+                                </StackPanel>
                             </Border>
                         </StackPanel>
                     </DataTemplate>

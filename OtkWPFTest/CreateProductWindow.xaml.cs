@@ -43,6 +43,7 @@ namespace OTKApp
         private async Task GetCategotyResponse()
         {
             dynamic result = await Request.GetJsonArrayFromHttpServer(Server.CategoryURL);
+            Console.WriteLine(result.GetType());
             foreach (var item in result.data)
             {
                 categories.Add(new Category(item.category.ToString()));

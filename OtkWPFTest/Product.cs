@@ -17,7 +17,8 @@ namespace OTKApp
             string manufacturer,
             int price,
             string image,
-            string description)
+            string description,
+            string amount)
         {
             Article = article;
             Name = name;
@@ -26,6 +27,7 @@ namespace OTKApp
             Price = price;
             Image = image;
             Description = description;
+            Amount = amount;
         }
 
         public int Article { get; set; }
@@ -35,5 +37,6 @@ namespace OTKApp
         public int Price { get; set; }
         public string Image { get; set; }
         public string Description { get; set; }
+        public string Amount { get; set; }
     }
 }

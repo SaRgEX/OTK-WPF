@@ -49,27 +49,30 @@ namespace OTKApp
         private void Button_UpdateProduct(object sender, RoutedEventArgs e)
         {
             var data = new JsonObject();
-            int article = int.Parse(tbArticle.Text);
-            if (Validate(tbName.Text))
+            int article = 0;
+            if (!Validate(tbArticle.Text))
+                int.TryParse(tbArticle.Text, out article);
+            if (!Validate(tbName.Text))
                 data["name"] = tbName.Text;
-            if (Validate(cbCategory.Text))
+            if (!Validate(cbCategory.Text))
                 data["category"] = (cbCategory.SelectedItem as Category).Name;
-            if (Validate(cbManufacturer.Text))
+            if (!Validate(cbManufacturer.Text))
                 data["manufacturer"] = (cbManufacturer.SelectedItem as Manufacturer).Name;
-            if (Validate(tbPrice.Text))
+            if (!Validate(tbPrice.Text))
                 data["price"] = int.Parse(tbPrice.Text);
-            if (Validate(tbImage.Text))
+            if (!Validate(tbImage.Text))
                 data["image"] = tbImage.Text;
-            if (Validate(tbDescription.Text))
+            if (!Validate(tbDescription.Text))
                 data["description"] = tbDescription.Text;
+            if (!Validate(tbAmount.Text))
+                data["amount"] = int.Parse(tbAmount.Text);
             var content = new StringContent(data.ToString(), Encoding.UTF8, "application/json");
             _ = PutResponse(article, content);
         }
 
         private bool Validate(string text)
         {
-            if (String.IsNullOrEmpty(text)) return false;
-            return true;
+            return String.IsNullOrEmpty(text);
         }
 
         private async Task PutResponse(int article, HttpContent content)

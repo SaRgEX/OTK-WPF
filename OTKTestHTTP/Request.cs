@@ -11,14 +11,14 @@ namespace OTKLib
     {
         public static async Task<dynamic> GetJsonArrayFromHttpServer(string url)
         {
-            using var client = new HttpClient();
-
-            var result = await client.GetStringAsync(url);
-            dynamic json = JsonConvert.DeserializeObject(result);
-            if (json == null)
-                return null;
-            return json;
-            
+            using (var client = new HttpClient())
+            {
+                var result = await client.GetStringAsync(url);
+                dynamic json = JsonConvert.DeserializeObject(result);
+                if (json == null)
+                    return null;
+                return json;
+            }
         }
 
         public static async Task<bool> PostRequest(string url, object data)

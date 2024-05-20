@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OTKApp"
         mc:Ignorable="d"
-        Title="ProductWindow" Height="450" Width="800">
+        Title="ProductWindow" MinHeight="470" Width="800">
     <Grid>
         <Border MaxHeight="650" MaxWidth="500" BorderThickness="2" BorderBrush="Black" CornerRadius="12">
             <StackPanel Margin="15">
@@ -39,6 +39,8 @@
                 <TextBox Name="tbImage"></TextBox>
                 <Label>Description</Label>
                 <TextBox Name="tbDescription"></TextBox>
+                <Label>Amount</Label>
+                <TextBox Name="tbAmount"></TextBox>
                 <StackPanel Margin="0 20" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <Button VerticalAlignment="Center" Margin="10 0" Padding="10" Click="Button_DeleteProduct">Delete</Button>
                     <Button VerticalAlignment="Center" Margin="10 0" Padding="10" Click="Button_UpdateProduct">Update</Button>

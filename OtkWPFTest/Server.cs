@@ -13,7 +13,6 @@ namespace OTKApp
         public static string URL
         {
             get => "http://localhost:8080";
-
         }
 
         public static string SignInURL
