@@ -12,7 +12,7 @@ namespace OTKApp
 
         public static string URL
         {
-            get => "http://localhost:8080";
+            get => "http://31.129.59.73/api";
         }
 
         public static string SignInURL
@@ -22,21 +22,21 @@ namespace OTKApp
 
         public static string ProductURL
         {
-            get => $"{URL}/products";
+            get => $"{URL}/products/";
         }
 
         public static string IdentifiedProductURL(int id)
         {
-            return $"{ProductURL}/{id}";
+            return $"{ProductURL}{id}/";
         }
 
         public static string CategoryURL
         {
-            get => $"{URL}/category";
+            get => $"{URL}/category/";
         }
         public static string ManufacturerURL
         {
-            get => $"{URL}/manufacturer";
+            get => $"{URL}/manufacturer/";
         }
     }
 }
